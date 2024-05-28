@@ -93,6 +93,11 @@ dependencies:
     specifier: 2.1.4
     version: 2.1.4
 
+devDependencies:
+  '@types/redux-logger':
+    specifier: ^3.0.13
+    version: 3.0.13
+
 packages:
 
   /@alloc/quick-lru@5.2.0:
@@ -3261,6 +3266,12 @@ packages:
       '@types/scheduler': 0.23.0
       csstype: 3.1.3
     dev: false
+
+  /@types/redux-logger@3.0.13:
+    resolution: {integrity: sha512-jylqZXQfMxahkuPcO8J12AKSSCQngdEWQrw7UiLUJzMBcv1r4Qg77P6mjGLjM27e5gFQDPD8vwUMJ9AyVxFSsg==}
+    dependencies:
+      redux: 5.0.1
+    dev: true
 
   /@types/resolve@1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
@@ -9861,6 +9872,10 @@ packages:
     dependencies:
       '@babel/runtime': 7.24.5
     dev: false
+
+  /redux@5.0.1:
+    resolution: {integrity: sha512-M9/ELqF6fy8FwmkpnF0S3YKOqMyoWJ4+CS5Efg2ct3oY9daQvd/Pc71FpGZsVsbl3Cpb+IIcjBDUnnyBdQbq4w==}
+    dev: true
 
   /reflect.getprototypeof@1.0.6:
     resolution: {integrity: sha512-fmfw4XgoDke3kdI6h4xcUz1dG8uaiv5q9gcEwLS4Pnth2kxT+GZ7YehS1JTMGBQmtV7Y4GFGbs2re2NqhdozUg==}
