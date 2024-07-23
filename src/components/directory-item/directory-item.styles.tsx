@@ -1,6 +1,13 @@
 import styled from 'styled-components';
+interface BackgroundImageProps {
+  imageUrl: string;
+}
 
-export const BackgroundImage = styled.div`
+interface DirectoryItemContainerProps {
+  onClick: () => void;
+  children: React.ReactNode;
+}
+export const BackgroundImage = styled.div<BackgroundImageProps>`
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -34,7 +41,7 @@ export const Body = styled.div`
   }
 `;
 
-export const DirectoryItemContainer = styled.div`
+export const DirectoryItemContainer = styled.div<DirectoryItemContainerProps>`
   min-width: 30%;
   height: 240px;
   flex: 1 1 auto;
