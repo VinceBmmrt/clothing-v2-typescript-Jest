@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-
-export const CartIconContainer = styled.div`
+type DivProps = React.HTMLProps<HTMLDivElement>;
+export const CartIconContainer = styled.div<DivProps>`
   width: 45px;
   height: 45px;
   position: relative;
