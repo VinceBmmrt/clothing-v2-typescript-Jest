@@ -1,4 +1,5 @@
-import { CartItemContainer, ItemDetails } from './cart-item.styles';
+import { memo } from "react";
+import { CartItemContainer, ItemDetails } from "./cart-item.styles";
 interface CartItemProps {
   cartItem: {
     name: string;
@@ -22,4 +23,4 @@ const CartItem = ({ cartItem }: CartItemProps) => {
   );
 };
 
-export default CartItem;
+export default memo(CartItem);

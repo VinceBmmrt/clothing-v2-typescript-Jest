@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-
+import styled from "styled-components";
+type DivProps = React.HTMLAttributes<HTMLDivElement>;
 export const CheckoutItemContainer = styled.div`
   width: 100%;
   display: flex;
@@ -28,7 +28,7 @@ export const Quantity = styled(BaseSpan)`
   display: flex;
 `;
 
-export const Arrow = styled.div`
+export const Arrow = styled.div<DivProps>`
   cursor: pointer;
 `;
 
@@ -36,7 +36,7 @@ export const Value = styled.span`
   margin: 0 10px;
 `;
 
-export const RemoveButton = styled.div`
+export const RemoveButton = styled.div<DivProps>`
   padding-left: 12px;
   cursor: pointer;
 `;
