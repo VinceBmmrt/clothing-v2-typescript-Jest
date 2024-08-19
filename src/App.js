@@ -4,8 +4,8 @@ import { Route, Routes } from "react-router-dom";
 import Spinner from "./components/spinner/spinner.component";
 // import Checkout from "./routes/checkout/checkout.component";
 // import Shop from "./routes/shop/shop.component";
+import { GlobalStyles } from "./global.styles";
 import { checkUserSession } from "./store/user/user.action";
-
 const Home = lazy(() => import("./routes/home/home.component"));
 const Authentication = lazy(() =>
   import("./routes/authentication/authentication.component")
@@ -25,6 +25,7 @@ const App = () => {
 
   return (
     <Suspense fallback={<Spinner />}>
+      <GlobalStyles />
       <Routes>
         <Route path="/" element={<Navigation />}>
           <Route index element={<Home />} />

@@ -9,7 +9,6 @@ import App from "./App";
 import { persistor, store } from "./store/store";
 import { stripePromise } from "./utils/stripe/stripe.utils";
 
-import "./index.scss";
 import * as ServiceWorkerRegistration from "./serviceWorkerRegistration";
 const rootElement = document.getElementById("root");
 

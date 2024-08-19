@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 interface BackgroundImageProps {
   imageUrl: string;
 }
@@ -71,5 +71,9 @@ export const DirectoryItemContainer = styled.div<DirectoryItemContainerProps>`
     ${Body} {
       opacity: 0.9;
     }
+  }
+
+  @media screen and (max-width: 800px) {
+    height: 200px;
   }
 `;
