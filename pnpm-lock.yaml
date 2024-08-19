@@ -107,6 +107,42 @@ dependencies:
   web-vitals:
     specifier: 2.1.4
     version: 2.1.4
+  workbox-background-sync:
+    specifier: ^6.6.0
+    version: 6.6.0
+  workbox-broadcast-update:
+    specifier: ^6.6.0
+    version: 6.6.0
+  workbox-cacheable-response:
+    specifier: ^6.6.0
+    version: 6.6.0
+  workbox-core:
+    specifier: ^6.6.0
+    version: 6.6.0
+  workbox-expiration:
+    specifier: ^6.6.0
+    version: 6.6.0
+  workbox-google-analytics:
+    specifier: ^6.6.1
+    version: 6.6.1
+  workbox-navigation-preload:
+    specifier: ^6.6.0
+    version: 6.6.0
+  workbox-precaching:
+    specifier: ^6.6.0
+    version: 6.6.0
+  workbox-range-requests:
+    specifier: ^6.6.0
+    version: 6.6.0
+  workbox-routing:
+    specifier: ^6.6.0
+    version: 6.6.0
+  workbox-strategies:
+    specifier: ^6.6.0
+    version: 6.6.0
+  workbox-streams:
+    specifier: ^6.6.0
+    version: 6.6.0
 
 devDependencies:
   '@types/redux-logger':
@@ -11680,6 +11716,14 @@ packages:
       workbox-core: 6.6.0
     dev: false
 
+  /workbox-background-sync@6.6.1:
+    resolution: {integrity: sha512-trJd3ovpWCvzu4sW0E8rV3FUyIcC0W8G+AZ+VcqzzA890AsWZlUGOTSxIMmIHVusUw/FDq1HFWfy/kC/WTRqSg==}
+    deprecated: this package has been deprecated
+    dependencies:
+      idb: 7.1.1
+      workbox-core: 6.6.1
+    dev: false
+
   /workbox-broadcast-update@6.6.0:
     resolution: {integrity: sha512-nm+v6QmrIFaB/yokJmQ/93qIJ7n72NICxIwQwe5xsZiV2aI93MGGyEyzOzDPVz5THEr5rC3FJSsO3346cId64Q==}
     dependencies:
@@ -11743,6 +11787,11 @@ packages:
     resolution: {integrity: sha512-GDtFRF7Yg3DD859PMbPAYPeJyg5gJYXuBQAC+wyrWuuXgpfoOrIQIvFRZnQ7+czTIQjIr1DhLEGFzZanAT/3bQ==}
     dev: false
 
+  /workbox-core@6.6.1:
+    resolution: {integrity: sha512-ZrGBXjjaJLqzVothoE12qTbVnOAjFrHDXpZe7coCb6q65qI/59rDLwuFMO4PcZ7jcbxY+0+NhUVztzR/CbjEFw==}
+    deprecated: this package has been deprecated
+    dev: false
+
   /workbox-expiration@6.6.0:
     resolution: {integrity: sha512-baplYXcDHbe8vAo7GYvyAmlS4f6998Jff513L4XvlzAOxcl8F620O91guoJ5EOf5qeXG4cGdNZHkkVAPouFCpw==}
     dependencies:
@@ -11758,6 +11807,16 @@ packages:
       workbox-core: 6.6.0
       workbox-routing: 6.6.0
       workbox-strategies: 6.6.0
+    dev: false
+
+  /workbox-google-analytics@6.6.1:
+    resolution: {integrity: sha512-1TjSvbFSLmkpqLcBsF7FuGqqeDsf+uAXO/pjiINQKg3b1GN0nBngnxLcXDYo1n/XxK4N7RaRrpRlkwjY/3ocuA==}
+    deprecated: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
+    dependencies:
+      workbox-background-sync: 6.6.1
+      workbox-core: 6.6.1
+      workbox-routing: 6.6.1
+      workbox-strategies: 6.6.1
     dev: false
 
   /workbox-navigation-preload@6.6.0:
@@ -11797,10 +11856,24 @@ packages:
       workbox-core: 6.6.0
     dev: false
 
+  /workbox-routing@6.6.1:
+    resolution: {integrity: sha512-j4ohlQvfpVdoR8vDYxTY9rA9VvxTHogkIDwGdJ+rb2VRZQ5vt1CWwUUZBeD/WGFAni12jD1HlMXvJ8JS7aBWTg==}
+    deprecated: this package has been deprecated
+    dependencies:
+      workbox-core: 6.6.1
+    dev: false
+
   /workbox-strategies@6.6.0:
     resolution: {integrity: sha512-eC07XGuINAKUWDnZeIPdRdVja4JQtTuc35TZ8SwMb1ztjp7Ddq2CJ4yqLvWzFWGlYI7CG/YGqaETntTxBGdKgQ==}
     dependencies:
       workbox-core: 6.6.0
+    dev: false
+
+  /workbox-strategies@6.6.1:
+    resolution: {integrity: sha512-WQLXkRnsk4L81fVPkkgon1rZNxnpdO5LsO+ws7tYBC6QQQFJVI6v98klrJEjFtZwzw/mB/HT5yVp7CcX0O+mrw==}
+    deprecated: this package has been deprecated
+    dependencies:
+      workbox-core: 6.6.1
     dev: false
 
   /workbox-streams@6.6.0:

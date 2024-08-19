@@ -1,16 +1,16 @@
+import { Elements } from "@stripe/react-stripe-js";
 import React from "react";
 import { render } from "react-dom";
-import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
-import { Elements } from "@stripe/react-stripe-js";
 
 import App from "./App";
-import { store, persistor } from "./store/store";
+import { persistor, store } from "./store/store";
 import { stripePromise } from "./utils/stripe/stripe.utils";
 
 import "./index.scss";
-
+import * as ServiceWorkerRegistration from "./serviceWorkerRegistration";
 const rootElement = document.getElementById("root");
 
 render(
@@ -27,3 +27,4 @@ render(
   </React.StrictMode>,
   rootElement
 );
+ServiceWorkerRegistration.register();
