@@ -1,17 +1,17 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
 
-import { addItemToCart } from '../../store/cart/cart.action';
-import { selectCartItems } from '../../store/cart/cart.selector';
+import { addItemToCart } from "../../store/cart/cart.actions";
+import { selectCartItems } from "../../store/cart/cart.selector";
 
-import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
+import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
 
-import { FC } from 'react';
+import { FC } from "react";
 import {
   Footer,
   Name,
   Price,
   ProductCartContainer,
-} from './product-card.styles';
+} from "./product-card.styles";
 
 interface Product {
   id: number;
@@ -23,7 +23,6 @@ interface Product {
 interface ProductItemProps {
   product: Product;
 }
-
 
 const ProductCard: FC<ProductItemProps> = ({ product }) => {
   const { name, price, imageUrl } = product;

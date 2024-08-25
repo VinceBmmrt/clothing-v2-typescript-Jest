@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import CartDropdown from "./cart-dropdown.component";
+import CartDropdown from "../cart-dropdown.component";
 
 jest.mock("react-redux", () => ({
   useSelector: jest.fn(),
