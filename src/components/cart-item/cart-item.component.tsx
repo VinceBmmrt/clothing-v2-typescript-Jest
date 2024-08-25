@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { CartItemContainer, ItemDetails } from "./cart-item.styles";
+
 interface CartItemProps {
   cartItem: {
     name: string;
@@ -8,11 +9,12 @@ interface CartItemProps {
     quantity: number;
   };
 }
+
 const CartItem = ({ cartItem }: CartItemProps) => {
   const { name, imageUrl, price, quantity } = cartItem;
   return (
-    <CartItemContainer>
-      <img src={imageUrl} alt={`${name}`} />
+    <CartItemContainer as="div" data-testid="cart-item">
+      <img src={imageUrl} alt={name} />
       <ItemDetails>
         <span>{name}</span>
         <span>
