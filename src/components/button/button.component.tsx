@@ -12,18 +12,19 @@ export enum BUTTON_TYPE_CLASSES {
   inverted = "inverted",
 }
 
+type ButtonComponent = React.ComponentType<
+  React.ButtonHTMLAttributes<HTMLButtonElement>
+>;
 
-type ButtonComponent = React.ComponentType<React.ButtonHTMLAttributes<HTMLButtonElement>>;
-
-
-const getButton = (buttonType: BUTTON_TYPE_CLASSES = BUTTON_TYPE_CLASSES.base): ButtonComponent => {
+const getButton = (
+  buttonType: BUTTON_TYPE_CLASSES = BUTTON_TYPE_CLASSES.base
+): ButtonComponent => {
   return {
     [BUTTON_TYPE_CLASSES.base]: BaseButton,
     [BUTTON_TYPE_CLASSES.google]: GoogleSignInButton,
     [BUTTON_TYPE_CLASSES.inverted]: InvertedButton,
-  }[buttonType] as ButtonComponent; 
+  }[buttonType] as ButtonComponent;
 };
-
 
 export type ButtonProps = {
   children?: React.ReactNode;
@@ -31,8 +32,12 @@ export type ButtonProps = {
   isLoading?: boolean;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-
-const Button = ({ children, buttonType = BUTTON_TYPE_CLASSES.base, isLoading = false, ...otherProps }: ButtonProps) => {
+const Button = ({
+  children,
+  buttonType = BUTTON_TYPE_CLASSES.base,
+  isLoading = false,
+  ...otherProps
+}: ButtonProps) => {
   const CustomButton = getButton(buttonType);
   return (
     <CustomButton disabled={isLoading} {...otherProps}>
