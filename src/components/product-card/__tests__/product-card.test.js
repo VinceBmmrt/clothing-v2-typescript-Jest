@@ -50,7 +50,10 @@ describe("ProductCard test", () => {
     await fireEvent.click(signOutLinkElement);
     // Assert that the mockDispatch function was called
     expect(mockDispatch).toHaveBeenCalled();
+    const signOutAction = signOutStart();
     // Assert that the mockDispatch function was called with the signOutStart action
-    expect(mockDispatch).toHaveBeenCalledWith(signOutStart());
+    expect(mockDispatch).toHaveBeenCalledWith(signOutAction);
+    // Clear the mockDispatch function
+    mockDispatch.mockClear();
   });
 });
